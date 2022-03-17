@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Social Login for RISE CRM">
+        <meta name="author" content="classiccompiler">
+        <link rel="icon" href="assets/images/favicon.png" />
+
+        <title>Social Login for RISE CRM</title>
+
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+
+        <script src="assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+        <script src="assets/js/helper.js" type="text/javascript"></script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb20">
+            <div id="navbar-brand" class="navbar-brand ml15">Social Login for RISE CRM</div>
+        </nav>
+
+        <div id="content" class="box">
+            <div id="sidebar" class="box-content">
+                <div id="sidebar-scroll">
+                    <ul class="" id="sidebar-menu">
+                        <li class="main"><a href="#installation" title="Installation">Installation</a></li>
+                        <li class="main"><a href="#features" title="Features">Features</a></li>
+                        <li class="main"><a href="#settings" title="Settings">Settings</a></li>
+                        <li class="main"><a href="#upgrading_guide" title="Upgrading Guide">Upgrading Guide</a></li>
+                        <li class="main"><a href="#thanks" title="Thanks">Thanks</a></li>
+                    </ul>
+                </div>          
+            </div>   
+
+            <div class="box-content">
+                <div class="scrollable page-content" id="scrollable-page">
+
+                    <section id="installation">
+                        <div class="card card-default">
+                            <div class="page-title clearfix">
+                                <h1>Installation</h1>
+                            </div>
+                            <div class="p20">
+                                <h5 class="mt0">Server Requirements</h5>
+                                <ul>
+                                    <li>HTTPS server to integrate Facebook login.</li>
+                                </ul>
+                                <h5>Quick Installation Guide</h5>
+                                <ul class='file-structure'>
+                                    <li>Go to <b>Settings > Plugins</b>.</li>
+                                    <li>Install the <b>Social-Login-for-RISE-CRM.zip </b>which you have downloaded from the Envato Market with a valid <b>purchase code</b>.</li>
+                                    <li>If everything is OK, it'll show a success message.</li>
+                                    <li>Activate the plugin from the option dropdown.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="features">
+                        <div class="card card-default">
+                            <div class="page-title clearfix">
+                                <h1>Features</h1>
+                            </div>
+                            <div class="p20">
+                                <ul>
+                                    <li>Integrate Google Login</li>
+                                    <li>Integrate Facebook Login</li>
+                                    <li>It'll login directly to your dashboard without entering your password.</li>
+                                    <li>If the selected account isn't exists in RISE and the client signup is enabled, a new client user will be created and logged in.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="settings">
+                        <div class="card card-default">
+                            <div class="page-title clearfix">
+                                <h1>Settings</h1>
+                            </div>
+                            <div class="p20">
+                                <p>You'll get the Social Login settings in <b>Settings > Setup > Social Login</b>.</p>
+
+                                <h5 class="mt0">Google</h5>
+                                <p>Follow this steps to setup Google Login:</p>
+
+                                <ol>
+                                    <li>Go to the <a href="https://console.developers.google.com/apis/" target="_blank">https://console.developers.google.com/apis/</a></li>
+                                    <li>Log in with your Google credentials if you are not logged in.</li>
+                                    <li>If you don't have a project yet, you'll need to create one. You can do this by clicking on the blue "<b>Create Project</b>" text on the right side!  ( If you already have a project, then in the top bar click on the name of your project instead, which will bring up a modal and click <b>"New Project"</b>. )</li>
+                                    <li>Name your project and then click on the "<b>Create</b>" button again!</li>
+                                    <li>Once you have a project, you'll end up in the dashboard. ( If earlier you have already had a Project, then make sure you select the created project in the top bar! )</li>
+                                    <li>Click the “<b>OAuth consent screen</b>” button on the left hand side.</li>
+                                    <li>Choose the <b>External</b> option for User Type and press "<b>Create</b>".
+                                    <li>Enter a name for your App to the "<b>App name</b>" field, which will appear as the name of the app asking for consent.</li>
+                                    <li>For the "<b>User support email</b>" field, select an email address that users can use to contact you with questions about their consent.</li>
+                                    <li>Under the "<b>Authorized domains</b>" section press the "<b>Add Domain</b>" button and  enter your domain name (without subdomains).</li>
+                                    <li>At the "<b>Developer contact information</b>" section, enter an email address that Google can use to notify you about any changes to your project.</li>
+                                    <li>Press "<b>Save and Continue</b>" then press it again on the "Scopes", "Test users" pages, too!</li>
+                                    <li>On the left side, click on the "<b>Credentials</b>" menu point, then click the "<b>+ Create Credentials</b>" button in the top bar.</li>
+                                    <li>Choose the "<b>OAuth client ID</b>" option.</li>
+                                    <li>Select the "<b>Web application</b>" under Application type.</li>
+                                    <li>Enter a "<b>Name</b>" for your OAuth client ID.</li>
+                                    <li>Under the "<b>Authorised redirect URIs</b>" section click "<b>Add URI</b>" and add the following URL: <b>https://yourdomain.com/index.php/social_login/authenticate_google_login</b>. You'll find this in your integration setting.</li>
+                                    <li>Click on the "<b>Create</b>" button</li>
+                                    <li>A modal should pop up with your credentials. If that doesn't happen, go to the Credentials in the left hand menu and select your app by clicking on its name and you'll be able to copy the "<b>Client ID</b>" and "<b>Client Secret</b>" from there.</li>
+                                    <li>Add them to RISE and click on <strong>Save & authorize</strong></li>
+                                    <li>On retrieving from API access, please make sure that, status of Google Login is showing <strong>Authorized</strong>. </li>
+                                </ol>
+
+                                <h5>Facebook</h5>
+                                <p>Follow this steps to setup Facebook Login:</p>
+
+                                <ol>
+                                    <li>Go to the <a href="https://developers.facebook.com/apps/" target="_blank">https://developers.facebook.com/apps/</a></li>
+                                    <li>Log in with your Facebook credentials if you are not logged in</li>
+                                    <li>Click on the "<b>Create App</b>" button and in the Popup choose the "<b>Consumer</b>" App type!</li>
+                                    <li>If you see the message "<b>Become a Facebook Developer</b>", then you need to click on the green "<b>Register Now</b>" button, fill the form then finally verify your account.</li>
+                                    <li>Fill "<b>App Display Name</b>", "<b>App Contact Email</b>". The specified "App Display Name" will appear on your <a href="https://developers.facebook.com/docs/facebook-login/permissions/overview/" target="_blank">Consent Screen</a>.</li>
+                                    <li><b>Optional</b>: choose a "<b>Business Manager Account</b>" in the popup, if you have any.</li>
+                                    <li>Click the "<b>Create App</b>" button and complete the Security Check.</li>
+                                    <li>At the "<b>Add a Product</b>" panel find "<b>Facebook Login</b>" and click "<b>Set Up</b>"</li>
+                                    <li>Select "<b>Web</b>" and enter <b>your full site url</b> to the "<b>Site URL</b>" field.</li>
+                                    <li>Press “<b>Save</b>”</li>
+                                    <li>Click on the “<b>Settings</b>” option what you find on the left side, under “<b>Products</b> - <b>Facebook Login</b>”</li>
+                                    <li>Add the following URL to the "<b>Valid OAuth redirect URIs</b>" field: <b>https://yourdomain.com/index.php/social_login/authenticate_facebook_login</b>. You'll find this in your integration setting.</li>
+                                    <li>Click on “<b>Save Changes</b>”</li>
+                                    <li>On the top left side, click on the “<b>Settings</b>” menu point, then click “<b>Basic</b>”</li>
+                                    <li>Enter your domain name to the "<b>App Domains</b>" field. (Example: yourdomain or subdomain.yourdomain)</li>
+                                    <li>Fill up the "<b>Privacy Policy URL</b>" field. Provide a publicly available and easily accessible privacy policy that explains what data you are collecting and how you will use that data.</li>
+                                    <li>At "<b>User Data Deletion</b>", choose the "<b>Data Deletion Instructions URL</b>" option. You can enter your site url here, since in RISE, only the client users have the option to delete their accounts (if the setting is enabled) and only admins can delete team members.</li>
+                                    <li>Select a “<b>Category</b>”, an “<b>App Icon</b>” and pick the “<b>App Purpose</b>” option that describes your App the best, then press "<b>Save Changes</b>"</li>
+                                    <li>Your application is currently private, which means that only you can log in with it. In the top bar click on the switch next to the "<b>In development</b>" label, then click the "<b>Switch Mode</b>" button.</li>
+                                    <li>On the top left side, click on the “<b>App Review</b>” menu point, then click “<b>Permissions and Features</b>”</li>
+                                    <li>Find "<b>email</b>" row and click "<b>Get Advanced Access</b>". Confirm from the modal.</li>
+                                    <li>Find "<b>public_profile</b>" row and click "<b>Get Advanced Access</b>". Confirm from the modal.</li>
+                                    <li>On the top left side, click on the “<b>Settings</b>” menu point, then click “<b>Basic</b>”</li>
+                                    <li>At the top of the page you can find your "<b>App ID</b>" and you can see your "<b>App secret</b>". </li>
+                                    <li>Add them to RISE and click on <strong>Save & authorize</strong></li>
+                                    <li>On retrieving from API access, please make sure that, status of Facebook Login is showing <strong>Authorized</strong>. </li>
+                                </ol>
+
+                                <p><b>Maintaining the Facebook App:</b></p>
+                                <p>
+                                    <strong>Facebook Data Use Checkup:</strong> To protecting people's privacy, Facebook might requests you to fill some forms, so they can ensure that your API access and data use comply with the Facebook policies. <br />
+                                    <strong>New Data Access Levels:</strong> Facebook started replacing the Development Mode / Live Mode switch in some Apps with Standard Access ( earlier Development Mode ) and Advanced Access ( earlier Live mode ), which can be modified on the <strong>Permissions and Features</strong> page. You can reach this page from the left hand menu of your App, under <strong>App Review</strong>.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="upgrading_guide">
+                        <div class="card card-default">
+                            <div class="page-title clearfix">
+                                <h1>Upgrading Guide</h1>
+                            </div>
+                            <div class="p20">
+                                <p>Please note that you can only download the updates if you had a valid purchase code on installation. </p>
+                                <div class="alert alert-danger">Please backup all files and database before start the installation of updates.</div>
+                                <p>There is a very&nbsp;easy way to update your application.</p>
+                                <p>To install any updates go to <strong>Settings > Plugins > Social Login > Dropdown > Updates</strong>. The download will be start automatically once any new update is available. Once the download is completed you can install the updates by clicking on the link. That&rsquo;s&nbsp;all!</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="thanks">
+                        <div class="card card-default">
+                            <div class="page-title clearfix">
+                                <h1>Thanks</h1>
+                            </div>
+                            <div class="p20">
+                                <p>
+                                    Thanks again for purchasing this plugin. <br />
+                                    If you have any query or suggestion, please send an email from Support page.
+                                </p>
+                                <p>
+                                    Best wishes<br>
+                                    ClassicCompiler Team
+                                </p>
+                                <p><a href="https://codecanyon.net/user/classiccompiler" target="_blank">https://codecanyon.net/user/classiccompiler</a></p>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+</html>
